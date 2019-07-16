@@ -7,6 +7,7 @@ export default class Lottie extends React.Component {
     const {
       options,
       eventListeners,
+      ...rest
     } = this.props;
 
     const {
@@ -165,6 +166,7 @@ export default class Lottie extends React.Component {
         role={ariaRole}
         aria-label={ariaLabel}
         tabIndex="0"
+        {...rest}
       />
     );
   }
