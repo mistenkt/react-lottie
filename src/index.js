@@ -7,7 +7,6 @@ export default class Lottie extends React.Component {
     const {
       options,
       eventListeners,
-      ...rest
     } = this.props;
 
     const {
@@ -128,6 +127,7 @@ export default class Lottie extends React.Component {
       ariaLabel,
       isClickToPauseDisabled,
       title,
+      tabIndex
     } = this.props;
 
     const getSize = (initial) => {
@@ -165,8 +165,7 @@ export default class Lottie extends React.Component {
         title={title}
         role={ariaRole}
         aria-label={ariaLabel}
-        tabIndex="0"
-        {...rest}
+        tabIndex={tabIndex || 0}
       />
     );
   }
